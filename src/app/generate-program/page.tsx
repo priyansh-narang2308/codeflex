@@ -135,7 +135,7 @@ const GenerateProgramPage = () => {
         const fullName = user?.firstName
           ? `${user.firstName} ${user.lastName || ""}`.trim()
           : "Hey There";
-
+ 
         console.log("Starting Vapi with:", {
           id: process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID,
           fullName,
