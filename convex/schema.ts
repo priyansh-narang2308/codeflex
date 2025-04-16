@@ -6,7 +6,7 @@ export default defineSchema({
         name: v.string(),
         email: v.string(),
         image: v.optional(v.string()),
-        clerkId: v.string(),
+        clerkId: v.string(),  //this is to identify the clerk user
     }).index("by_clerk_id", ["clerkId"]),  //getting the user by its clerk id 
 
     plans: defineTable({
