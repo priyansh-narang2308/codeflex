@@ -49,13 +49,15 @@ export const createPlan = mutation({
     },
 });
 
+
+// to fetch the plans
 export const getUserPlans = query({
     args: { userId: v.string() },
     handler: async (ctx, args) => {
         const plans = await ctx.db
             .query("plans")
             .withIndex("by_user_id", (q) => q.eq("userId", args.userId))
-            .order("desc")
+            .order("desc")  //in descneig order
             .collect();
 
         return plans;
