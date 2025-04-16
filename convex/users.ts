@@ -40,6 +40,7 @@ export const updateUser = mutation({
 
         if (!existingUser) return;
 
+        // to chage the user
         return await ctx.db.patch(existingUser._id, args);
     },
 });

@@ -73,6 +73,7 @@ http.route({
 
 
         // TODO:USER UPDATED AS WELL TO DO 
+        // if we upload the image url or anything than the changes should be visible in the convex databse as well
         if (eventType === "user.updated") {
             const { id, email_addresses, first_name, last_name, image_url } = evt.data;
 
@@ -80,6 +81,7 @@ http.route({
             const name = `${first_name || ""} ${last_name || ""}`.trim();
 
             try {
+                // instead of synuser take updateuser
                 await ctx.runMutation(api.users.updateUser, {
                     clerkId: id,
                     email,
