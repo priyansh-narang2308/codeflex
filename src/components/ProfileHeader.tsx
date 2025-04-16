@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { UserResource } from "@clerk/types";
 import CornerElements from './CornerElements';
