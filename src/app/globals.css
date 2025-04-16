@@ -66,7 +66,6 @@
   --popover: #111827;
   --popover-foreground: #f2f2f2;
 
-  /* Primary - Main blue */
   --primary: var(--cyber-blue-bright);
   --primary-foreground: var(--cyber-dark);
 
